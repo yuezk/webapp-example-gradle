@@ -1,0 +1,3 @@
+rootProject.name = 'webapp-example-gradle'
+
+include "example-web", "example-service", "example-dao","example-domain"
