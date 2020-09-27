@@ -1,0 +1,38 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+allprojects {
+    apply plugin: 'idea'
+}
+
+subprojects {
+    idea {
+        module {
+            inheritOutputDirs = false
+            outputDir = new File(rootDir, '../example-web/src/main/webapp/WEB-INF/classes')
+        }
+    }
+}
+
+project(':example-web') {
+}
+
+project(':example-service') {
+}
+
+project(':example-dao') {
+}
+
+project(':example-domain') {
+}

@@ -1,0 +1,14 @@
+rootProject.name = 'webapp-example-root'
+
+include ':example-web'
+project(':example-web').projectDir = new File(rootDir, '../example-web')
+
+include ':example-service'
+project(':example-service').projectDir = new File(rootDir, '../example-service')
+
+include ':example-dao'
+project(':example-dao').projectDir = new File(rootDir, '../example-dao')
+
+include ':example-domain'
+project(':example-domain').projectDir = new File(rootDir, '../example-domain')
+
